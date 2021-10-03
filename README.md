@@ -15,6 +15,12 @@ This repository will show how to configure and use an environment with Apache 2,
 - [PSQL configs](#psql-configs)
     - [Login to root postgres](#login-to-root-postgres)
     - [Create a role](#create-a-role)
+- [Apache 2 Virtual Hosts](#apache-2-virtual-hosts)
+    - [Move the project to /var/www/](#move-the-project-to-varwww)
+    - [Permissions in /var/www/](#permissions-in-varwww)
+    - [Create the virtual host files](#create-the-virtual-host-files)
+    - [Activate the new Virtual Host files](#activate-the-new-virtual-host-files)
+    - [Configure the Host file from local server](#configure-the-host-file-from-local-server)
 - [References](#references)
 
 ---
@@ -117,7 +123,7 @@ CREATE DATABASE testdb;
 Logout from the psql shell and run the connection test script:
 
 ```shell
-$ php7.4 connection_test.php
+$ php7.4 scripts/connection_test.php
 ```
 
 ---
@@ -137,7 +143,7 @@ $ sudo -i -u postgres
 Then, you can access the PostgreSQL using the psql by typing the following command:
 
 ```shell
-postgres=# psql
+$ psql
 ```
 
 #### Create a role
@@ -161,6 +167,92 @@ and login as your newly created role:
 ```shell
 $ psql -U <username> postgres -h localhost -W
 ```
+
+---
+
+## Apache 2 Virtual Hosts
+
+How to access yourlocaldomainname.com using apache:
+
+#### Move the project to /var/www/
+
+Create / move your project folder, for example `cursophp.com/`, into `/var/www/`:
+
+```shell
+$ sudo mkdir /var/www/cursophp.com
+```
+
+And insert your `index.php` file into it.
+
+#### Permissions in /var/www/
+
+Add the apache user to the group of the logged in user:
+
+```shell
+$ sudo usermod -a -G www-data $USER
+```
+
+Change the group-level owner of the /var/www folder and its contents to the Apache group:
+
+```shell
+$ sudo chown -R $USER:www-data /var/www
+```
+
+Now we need to modify the permissions to ensure that the user has unrestricted access (write and read) to the files and that at the group level can read and execute the files. This way you ensure that other users can see your files (access the site) and your user has write access:
+
+```shell
+$ sudo chmod -R 775 /var/www
+```
+
+#### Create the virtual host files
+
+The files that define the Virtual Host are responsible for defining the configuration of each domain. Apache comes with a default file and we are going to copy it to use it as a starting point. Go to `/etc/apache2/sites-available/` and duplicate the vhost file, adapting it for your project:
+
+```shell
+$ cd /etc/apache2/sites-available/
+$ sudo cp 000-default.conf cursophp.com.conf
+```
+
+Now edit the new file, by leaving this content in it:
+
+```apache
+<VirtualHost *:80>
+	ServerName cursophp.com
+	ServerAlias www.cursophp.com
+	ServerAdmin admin@cursophp.com
+	DocumentRoot /var/www/cursophp.com
+
+	<Directory "/var/www/cursophp.com/">
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Require all granted
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
+#### Activate the new Virtual Host files
+
+Activate it on Apache and reload the server by doing:
+
+```shell
+$ sudo a2ensite cursophp.com.conf
+$ sudo systemctl reload apache2
+```
+
+#### Configure the Host file from local server
+
+It is necessary to “warn” the local server that the files related to these domains are configured locally, so that they are not searched on the internet. For that, edit the `/etc/hosts` file, and duplicate the second line, but typing our site domain name, leaving the file like this:
+
+```
+127.0.0.1       localhost
+127.0.1.1       data-hunter-gl
+127.0.1.1       cursophp.com
+```
+
+And, finally, you should be able to navigate into www.cursophp.com in your browser.
 
 ---
 
