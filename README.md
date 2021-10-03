@@ -259,3 +259,7 @@ And, finally, you should be able to navigate into www.cursophp.com in your brows
 ## References
 
 [1] https://www.postgresqltutorial.com/
+
+[2] https://www.php.net/manual/en/
+
+[3] [Node Studio Treinamentos](https://www.youtube.com/channel/UCZZ0NTtOgsLIT4Skr6GUpAw)

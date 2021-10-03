@@ -8,10 +8,13 @@
 </head>
 <body>
 
+<h1>Introdução ao PHP</h1>
+
 <?php
-  echo "Hello World!<br>";
-  print "Teste print";
+  print "<hr>";
+  echo "Escolha um dos exemplos abaixo:<br><br>";
+  echo "<a href='/variaveis.php'>Variáveis</a><br>";
 ?>
-  
+
 </body>
 </html>
