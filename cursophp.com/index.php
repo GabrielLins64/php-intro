@@ -14,6 +14,7 @@
   print "<hr>";
   echo "Escolha um dos exemplos abaixo:<br><br>";
   echo "<a href='/variaveis.php'>Variáveis</a><br>";
+  echo "<a href='/tipos-de-dados.php'>Tipos de Dados</a><br>";
 ?>
 
 </body>
