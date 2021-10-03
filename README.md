@@ -10,8 +10,8 @@ This repository will show how to configure and use an environment with Apache 2,
 - [Installation](#installation)
   - [Apache 2](#apache-2)
   - [PHP 7.4](#php-74)
-    - [PostgreSQL](#postgresql)
-      - [Testing the connection to the DB](#testing-the-connection-to-the-db)
+  - [PostgreSQL](#postgresql)
+    - [Testing the connection to the DB](#testing-the-connection-to-the-db)
 - [PSQL configs](#psql-configs)
     - [Login to root postgres](#login-to-root-postgres)
     - [Create a role](#create-a-role)
@@ -79,7 +79,7 @@ Add this code:
 
 Then, go to http://localhost/phpinfo.php.
 
-#### PostgreSQL
+### PostgreSQL
 
 Install the php-pgsql
 
@@ -112,7 +112,7 @@ Then, restart apache:
 $ sudo systemctl restart apache2
 ```
 
-##### Testing the connection to the DB
+#### Testing the connection to the DB
 
 First, [create a postgres user](#psql-configs). Then, login into it, and create a database named `testdb`:
 
@@ -259,3 +259,7 @@ And, finally, you should be able to navigate into www.cursophp.com in your brows
 ## References
 
 [1] https://www.postgresqltutorial.com/
+
+[2] https://www.php.net/manual/en/
+
+[3] [Node Studio Treinamentos](https://www.youtube.com/channel/UCZZ0NTtOgsLIT4Skr6GUpAw)
