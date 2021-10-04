@@ -22,6 +22,7 @@
   echo "<a href='/condicionais.php'>Condicionais</a><br>";
   echo "<a href='/operadores.php'>Operadores</a><br>";
   echo "<a href='/lacos.php'>Laços</a><br>";
+  echo "<a href='/funcoes.php'>Funções</a><br>";
 ?>
 
 </body>
