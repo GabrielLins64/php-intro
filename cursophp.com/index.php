@@ -18,6 +18,7 @@
   echo "<a href='/aspas-concat.php'>Aspas e Concatenação</a><br>";
   echo "<a href='/escopo-de-variaveis.php'>Escopo de Variáveis</a><br>";
   echo "<a href='/constantes.php'>Constantes</a><br>";
+  echo "<a href='/arrays.php'>Arrays</a><br>";
 ?>
 
 </body>
