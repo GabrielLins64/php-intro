@@ -19,6 +19,9 @@
   echo "<a href='/escopo-de-variaveis.php'>Escopo de Variáveis</a><br>";
   echo "<a href='/constantes.php'>Constantes</a><br>";
   echo "<a href='/arrays.php'>Arrays</a><br>";
+  echo "<a href='/condicionais.php'>Condicionais</a><br>";
+  echo "<a href='/operadores.php'>Operadores</a><br>";
+  echo "<a href='/lacos.php'>Laços</a><br>";
 ?>
 
 </body>
