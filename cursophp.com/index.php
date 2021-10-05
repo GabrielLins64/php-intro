@@ -24,6 +24,7 @@
   echo "<a href='/lacos.php'>Laços</a><br>";
   echo "<a href='/funcoes.php'>Funções</a><br>";
   echo "<a href='/superglobais.php'>Superglobais</a><br>";
+  echo "<a href='/forms'>Formulários</a><br>";
 ?>
 
 </body>
