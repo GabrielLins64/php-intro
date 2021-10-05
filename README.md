@@ -21,6 +21,7 @@ This repository will show how to configure and use an environment with Apache 2,
     - [Create the virtual host files](#create-the-virtual-host-files)
     - [Activate the new Virtual Host files](#activate-the-new-virtual-host-files)
     - [Configure the Host file from local server](#configure-the-host-file-from-local-server)
+- [Local serving with PHP](#local-serving-with-php)
 - [References](#references)
 
 ---
@@ -253,6 +254,22 @@ It is necessary to “warn” the local server that the files related to these d
 ```
 
 And, finally, you should be able to navigate into www.cursophp.com in your browser.
+
+---
+
+## Local serving with PHP
+
+If you would like to serve your project using only the [PHP built-in web server](https://www.php.net/manual/en/features.commandline.webserver.php), you can use the CLI command:
+
+```shell
+$ php7.4 -t <your-project-directory> -S <address>:<port>
+```
+
+Example:
+
+```shell
+$ php7.4 -t cursophp.com -S localhost:8080
+```
 
 ---
 
