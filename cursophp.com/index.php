@@ -23,6 +23,7 @@
   echo "<a href='/operadores.php'>Operadores</a><br>";
   echo "<a href='/lacos.php'>Laços</a><br>";
   echo "<a href='/funcoes.php'>Funções</a><br>";
+  echo "<a href='/superglobais.php'>Superglobais</a><br>";
 ?>
 
 </body>
