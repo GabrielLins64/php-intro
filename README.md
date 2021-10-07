@@ -22,6 +22,7 @@ This repository will show how to configure and use an environment with Apache 2,
     - [Activate the new Virtual Host files](#activate-the-new-virtual-host-files)
     - [Configure the Host file from local server](#configure-the-host-file-from-local-server)
 - [Local serving with PHP](#local-serving-with-php)
+- [PHP Interactive shell](#php-interactive-shell)
 - [References](#references)
 
 ---
@@ -269,6 +270,16 @@ Example:
 
 ```shell
 $ php7.4 -t cursophp.com -S localhost:8080
+```
+
+---
+
+## PHP Interactive shell
+
+If you want to use php in interactive shell mode to test some code or for any other purpose, just type the command:
+
+```shell
+$ php7.4 -a
 ```
 
 ---
