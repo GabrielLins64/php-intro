@@ -28,6 +28,7 @@
   echo "<a href='/forms/filtros.php'>Formulários com filtros</a><br>";
   echo "<a href='/upload'>Upload</a><br>";
   echo "<a href='/sessoes'>Sessões</a><br>";
+  echo "<a href='/sistemadelogin'>Sistema de Login</a><br>";
 ?>
 
 </body>

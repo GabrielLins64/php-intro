@@ -23,6 +23,7 @@ This repository will show how to configure and use an environment with Apache 2,
     - [Configure the Host file from local server](#configure-the-host-file-from-local-server)
 - [Local serving with PHP](#local-serving-with-php)
 - [PHP Interactive shell](#php-interactive-shell)
+- [Creating a database for login](#creating-a-database-for-login)
 - [References](#references)
 
 ---
@@ -280,6 +281,16 @@ If you want to use php in interactive shell mode to test some code or for any ot
 
 ```shell
 $ php7.4 -a
+```
+
+---
+
+## Creating a database for login
+
+Use the sql script to create a login database, its table and its first user:
+
+```shell
+$ psql -U <username> postgres -h localhost -W -f scripts/create_login_db.sql
 ```
 
 ---
