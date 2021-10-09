@@ -40,4 +40,40 @@ echo "<div style='color: green'>Resultado:<br>";
 echo "Sha 1: ".sha1($senha)."<br>";
 echo "</div><br>";
 
+echo "<hr><h3>Senha segura</h3>";
+
+echo '
+$options = [<br>
+&emsp;  \'cost\' => 13,<br>
+];<br>
+<br>
+$senhaSegura = password_hash($senha, PASSWORD_DEFAULT, $options);<br>
+$hashGerado = "$2y$13$KOahvobZJFzblxUWX7mKjOO6To1t4zseTKnr3XvcFB1cxwiRjLLOi";<br>
+echo "Senha segura: ".$senhaSegura;<br>
+<br>
+if (password_verify($senha, $hashGerado)):<br>
+&emsp;  echo "Senha válida!";<br>
+else:<br>
+&emsp;  echo "Senha inválida!";<br>
+endif;<br>
+<br>';
+
+echo "<div style='color: green'>Resultado:<br>";
+$options = [
+  'cost' => 13,
+];
+
+$senhaSegura = password_hash($senha, PASSWORD_DEFAULT, $options);
+$hashGerado = '$2y$13$KOahvobZJFzblxUWX7mKjOO6To1t4zseTKnr3XvcFB1cxwiRjLLOi';
+
+echo "Senha segura: ".$senhaSegura."<br>";
+
+if (password_verify($senha, $hashGerado)):
+  echo "Senha válida!<br>";
+else:
+  echo "Senha inválida!<br>";
+endif;
+
+echo "</div><br>";
+
 ?>
