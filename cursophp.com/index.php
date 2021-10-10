@@ -30,6 +30,7 @@
   echo "<a href='/sessoes'>Sessões</a><br>";
   echo "<a href='/sistemadelogin'>Sistema de Login</a><br>";
   echo "<a href='/criptografia.php'>Criptografia</a><br>";
+  echo "<a href='/include-e-require'>Include e Require</a><br>";
 ?>
 
 </body>
