@@ -1,0 +1,45 @@
+.rounded {
+  border-radius: 12px;
+}
+
+.me {
+  margin-right: 15px;
+}
+
+.my {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.h-center {
+  text-align: center;
+}
+
+/* --------- Tabela "scroll" --------- */
+
+table.scroll {
+  width: 100%;
+  border-spacing: 0;
+}
+
+table.scroll tbody,
+table.scroll thead { display: block; }
+
+thead tr th { 
+  height: 30px;
+  line-height: 30px;
+}
+
+table.scroll tbody {
+  height: 230px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+tbody { border-top: 2px solid black; }
+
+thead { padding-right: 12px; }
+
+tbody td, thead th {
+  width: 19%;
+}

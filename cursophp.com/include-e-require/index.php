@@ -25,14 +25,14 @@ echo '
 require "outro_arquivo.php";<br>
 require "outro_arquivo.php";<br>
 require_once "outro_arquivo.php";<br>
-require "naoexiste.php"; // Retorna um erro e para o script<br>
+<span style="color: gray">// require "naoexiste.php"; // Retorna um erro e para o script<br></span>
 <br>';
 
 echo "<div style='color: green'>Resultado:<br>";
 require 'outro_arquivo.php';
 require 'outro_arquivo.php';
 require_once 'outro_arquivo.php';
-require 'naoexiste.php'; // Retorna um erro e para o script
+// require 'naoexiste.php'; // Retorna um erro e para o script
 echo "</div><br>";
 
 ?>
