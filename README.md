@@ -24,6 +24,7 @@ This repository will show how to configure and use an environment with Apache 2,
 - [Local serving with PHP](#local-serving-with-php)
 - [PHP Interactive shell](#php-interactive-shell)
 - [Creating a database for login](#creating-a-database-for-login)
+- [Installing Materialize.css](#installing-materializecss)
 - [References](#references)
 
 ---
@@ -292,6 +293,12 @@ Use the sql script to create a login database, its table and its first user:
 ```shell
 $ psql -U <username> postgres -h localhost -W -f scripts/create_login_db.sql
 ```
+
+---
+
+## Installing Materialize.css
+
+Go to https://materializecss.com/getting-started.html and copy the CDN links. Then, add the *css* links to your project header, and the *js* links to your project footer.
 
 ---
 
