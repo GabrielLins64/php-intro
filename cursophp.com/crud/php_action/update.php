@@ -2,12 +2,22 @@
   session_start();
   require_once "db_conn.php";
 
+  function clear($input)
+  {
+    // Prevent SQL Injection (Best way would be through parametrized queries and PDO - PHP Data Object)
+    $var = pg_escape_string($input);
+    // Prevent XSS (Cross Site Scripting)
+    $var = htmlspecialchars($var);
+
+    return $var;
+  }
+
   if (isset($_POST['btn-editar'])):
     $id = pg_escape_string($_POST['id']);
-    $nome = pg_escape_string($_POST['nome']);
-    $sobrenome = pg_escape_string($_POST['sobrenome']);
-    $email = pg_escape_string($_POST['email']);
-    $idade = pg_escape_string($_POST['idade']);
+    $nome = clear($_POST['nome']);
+    $sobrenome = clear($_POST['sobrenome']);
+    $email = clear($_POST['email']);
+    $idade = clear($_POST['idade']);
 
     $sql = "
       UPDATE clientes SET 
