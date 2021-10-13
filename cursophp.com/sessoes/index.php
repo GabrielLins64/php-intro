@@ -13,15 +13,6 @@
   <?php
     echo 'O session_start deve ser chamado no inicio do código, antes de qualquer HTML, visto que altera headers do HTTP.';
 
-    function reset_session() {
-      session_reset();
-      $_SESSION['cor'] = "Verde";
-      $_SESSION['carro'] = "Veloster";
-      $page = $_SERVER['PHP_SELF'];
-      echo "GIJAGIJAS";
-      header("Refresh: 0; url=$page");
-    }
-
     echo '<br><br>
     session_start();<br>
 
