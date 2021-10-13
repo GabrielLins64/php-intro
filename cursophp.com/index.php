@@ -32,6 +32,7 @@
   echo "<a href='/criptografia.php'>Criptografia</a><br>";
   echo "<a href='/include-e-require'>Include e Require</a><br>";
   echo "<a href='/crud'>CRUD</a><br>";
+  echo "<a href='/cookies.php'>Cookies</a><br>";
 ?>
 
 </body>
