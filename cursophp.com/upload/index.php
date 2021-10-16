@@ -1,4 +1,7 @@
 <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <body>
   <button type="button" onclick="location.href='/'">Voltar</button>
   <button type="button" onclick="location.href='/upload';">Recarregar Página</button>

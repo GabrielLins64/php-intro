@@ -1,4 +1,7 @@
 <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <body>
   <button type="button" onclick="location.href='/forms'">Voltar</button>
   <h2>Formulário <?php echo $_SERVER['REQUEST_METHOD'] ?></h2>
