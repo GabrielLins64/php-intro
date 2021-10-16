@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <button type="button" onclick="location.href='/';">Voltar</button>
 <button type="button" onclick="location.href='/cookies.php';">Recarregar a página</button>
 <?php

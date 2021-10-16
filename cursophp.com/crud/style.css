@@ -17,6 +17,23 @@
 
 /* --------- Tabela "scroll" --------- */
 
+.table-container {
+  padding-bottom: 15px;
+  overflow: hidden;
+  overflow-x: auto !important;
+}
+
+@media only screen and (max-width: 415px) {
+  .table-container * {
+    font-size: 3vw;
+  }
+  
+  .table-container h3 {
+    font-size: 6vw;
+  }
+}
+
+
 table.scroll {
   width: 100%;
   border-spacing: 0;
@@ -33,7 +50,6 @@ thead tr th {
 table.scroll tbody {
   height: 230px;
   overflow-y: auto;
-  overflow-x: hidden;
 }
 
 tbody { border-top: 2px solid black; }

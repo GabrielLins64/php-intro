@@ -8,7 +8,7 @@
 <hr><h5>CRUD</h3>
 
 <div class="row">
-  <div class="col s12 m6 push-m3 blue rounded" style="padding-bottom: 15px;">
+  <div class="col s12 m6 push-m3 blue rounded table-container">
     <h3 class="light white-text"> Clientes </h3>
 
     <table class="striped scroll">
