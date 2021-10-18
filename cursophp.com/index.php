@@ -34,6 +34,8 @@
   echo "<a href='/crud'>CRUD</a><br>";
   echo "<a href='/cookies.php'>Cookies</a><br>";
   echo "<a href='/datas.php'>Datas</a><br>";
+  echo "<a href='/arquivos'>Manipulação de Arquivos</a><br>";
+  echo "<a href='/expressoes-regulares.php'>Expressões Regulares</a><br>";
 ?>
 
 </body>
