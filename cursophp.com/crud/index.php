@@ -25,7 +25,7 @@
 
       <tbody>
         <?php
-          $sql = "SELECT * FROM clientes ORDER BY id ASC";
+          $sql = "SELECT * FROM clientes ORDER BY id DESC";
           $res = pg_query($connection, $sql);
 
           while ($dados = pg_fetch_array($res)):
