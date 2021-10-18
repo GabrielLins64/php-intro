@@ -1,6 +1,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <button type="button" onclick="location.href='/';">Voltar</button>
-<button type="button" onclick="location.href='/cookies.php';">Recarregar a página</button>
+<button type="button" onclick="location.href='/basico/cookies.php';">Recarregar a página</button>
 <?php
 // ---------- X ---------- X ---------- 
 echo "<h2>Cookie</h2>";
@@ -42,7 +42,7 @@ function limpar_cookies()
 {
   setcookie('email', 'glm@gmail.com', time()-3600);
   setcookie('ultima_pesquisa', 'curso de php', time()-3600);
-  header('Location: /cookies.php');
+  header('Location: /basico/cookies.php');
 };
 
 if (isset($_GET['clear_cookies'])):

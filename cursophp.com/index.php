@@ -13,29 +13,29 @@
 <?php
   print "<hr>";
   echo "Escolha um dos exemplos abaixo:<br><br>";
-  echo "<a href='/variaveis.php'>Variáveis</a><br>";
-  echo "<a href='/tipos-de-dados.php'>Tipos de Dados</a><br>";
-  echo "<a href='/aspas-concat.php'>Aspas e Concatenação</a><br>";
-  echo "<a href='/escopo-de-variaveis.php'>Escopo de Variáveis</a><br>";
-  echo "<a href='/constantes.php'>Constantes</a><br>";
-  echo "<a href='/arrays.php'>Arrays</a><br>";
-  echo "<a href='/condicionais.php'>Condicionais</a><br>";
-  echo "<a href='/operadores.php'>Operadores</a><br>";
-  echo "<a href='/lacos.php'>Laços</a><br>";
-  echo "<a href='/funcoes.php'>Funções</a><br>";
-  echo "<a href='/superglobais.php'>Superglobais</a><br>";
+  echo "<a href='/basico/variaveis.php'>Variáveis</a><br>";
+  echo "<a href='/basico/tipos-de-dados.php'>Tipos de Dados</a><br>";
+  echo "<a href='/basico/aspas-concat.php'>Aspas e Concatenação</a><br>";
+  echo "<a href='/basico/escopo-de-variaveis.php'>Escopo de Variáveis</a><br>";
+  echo "<a href='/basico/constantes.php'>Constantes</a><br>";
+  echo "<a href='/basico/arrays.php'>Arrays</a><br>";
+  echo "<a href='/basico/condicionais.php'>Condicionais</a><br>";
+  echo "<a href='/basico/operadores.php'>Operadores</a><br>";
+  echo "<a href='/basico/lacos.php'>Laços</a><br>";
+  echo "<a href='/basico/funcoes.php'>Funções</a><br>";
+  echo "<a href='/basico/superglobais.php'>Superglobais</a><br>";
   echo "<a href='/forms'>Formulários</a><br>";
   echo "<a href='/forms/filtros.php'>Formulários com filtros</a><br>";
   echo "<a href='/upload'>Upload</a><br>";
   echo "<a href='/sessoes'>Sessões</a><br>";
   echo "<a href='/sistemadelogin'>Sistema de Login</a><br>";
-  echo "<a href='/criptografia.php'>Criptografia</a><br>";
+  echo "<a href='/basico/criptografia.php'>Criptografia</a><br>";
   echo "<a href='/include-e-require'>Include e Require</a><br>";
   echo "<a href='/crud'>CRUD</a><br>";
-  echo "<a href='/cookies.php'>Cookies</a><br>";
-  echo "<a href='/datas.php'>Datas</a><br>";
+  echo "<a href='/basico/cookies.php'>Cookies</a><br>";
+  echo "<a href='/basico/datas.php'>Datas</a><br>";
   echo "<a href='/arquivos'>Manipulação de Arquivos</a><br>";
-  echo "<a href='/expressoes-regulares.php'>Expressões Regulares</a><br>";
+  echo "<a href='/basico/expressoes-regulares.php'>Expressões Regulares</a><br>";
 ?>
 
 </body>
