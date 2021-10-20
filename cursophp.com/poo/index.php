@@ -15,6 +15,7 @@
   print "<hr>";
   echo "Escolha um dos exemplos abaixo:<br><br>";
   echo "<a href='/poo/classes-atributos-metodos.php'>Classes, Atributos e Métodos</a><br>";
+  echo "<a href='/poo/getters-setters.php'>Getters e Setters</a><br>";
   
 ?>
 
