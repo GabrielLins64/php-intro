@@ -15,7 +15,13 @@
   print "<hr>";
   echo "Escolha um dos exemplos abaixo:<br><br>";
   echo "<a href='/poo/classes-atributos-metodos.php'>Classes, Atributos e Métodos</a><br>";
-  
+  echo "<a href='/poo/getters-setters.php'>Getters e Setters</a><br>";
+  echo "<a href='/poo/construtor.php'>Construtor</a><br>";
+  echo "<a href='/poo/heranca.php'>Herança</a><br>";
+  echo "<a href='/poo/modificadores-de-acesso.php'>Modificadores de Acesso</a><br>";
+  echo "<a href='/poo/abstracao.php'>Abstração</a><br>";
+  echo "<a href='/poo/constantes-self-parent.php'>Constantes, Self e Parent</a><br>";
+  echo "<a href='/poo/estaticos.php'>Métodos e Atributos Estáticos</a><br>";
 ?>
 
 </body>

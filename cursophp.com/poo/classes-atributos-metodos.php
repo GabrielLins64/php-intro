@@ -4,8 +4,6 @@
 // ---------- X ---------- X ---------- 
 echo "<h2>Classes, Atributos e Métodos</h2>";
 
-echo "<hr><h3>Subtítulo1</h3>";
-
 echo '
 class Robo<br>
 {<br>
