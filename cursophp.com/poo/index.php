@@ -17,6 +17,7 @@
   echo "<a href='/poo/classes-atributos-metodos.php'>Classes, Atributos e Métodos</a><br>";
   echo "<a href='/poo/getters-setters.php'>Getters e Setters</a><br>";
   echo "<a href='/poo/construtor.php'>Construtor</a><br>";
+  echo "<a href='/poo/heranca.php'>Herança</a><br>";
 ?>
 
 </body>
