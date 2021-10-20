@@ -36,6 +36,7 @@
   echo "<a href='/basico/datas.php'>Datas</a><br>";
   echo "<a href='/arquivos'>Manipulação de Arquivos</a><br>";
   echo "<a href='/basico/expressoes-regulares.php'>Expressões Regulares</a><br>";
+  echo "<a href='/poo'>PHP Orientado a Objetos</a><br>";
 ?>
 
 </body>
