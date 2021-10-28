@@ -16,7 +16,7 @@ class Animal<br>
 <br>
 class Cavalo extends animal<br>
 {<br>
-&emsp;// Polimorfismo é a reescrita de um método herdado<br>
+&emsp;<span style="color: gray">// Polimorfismo é a reescrita de um método herdado<br></span>
 &emsp;public function Andar()<br>
 &emsp;{<br>
 &emsp;&emsp;echo "O cavalo andou";<br>
