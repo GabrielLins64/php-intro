@@ -26,6 +26,7 @@
   echo "<a href='/poo/interfaces.php'>Interfaces</a><br>";
   echo "<a href='/poo/namespaces'>Namespaces</a><br>";
   echo "<a href='/poo/referencia-clonagem-obj.php'>Referência e Clonagem de Objetos</a><br>";
+  echo "<a href='/poo/tratamento-excecoes.php'>Tratamento de Exceções</a><br>";
 ?>
 
 </body>
