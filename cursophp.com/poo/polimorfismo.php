@@ -32,19 +32,19 @@ echo "<div style='color: green'>Resultado:<br>";
 
 class Animal
 {
-    public function andar()
-    {
-        echo "O animal andou<br>";
-    }
+  public function andar()
+  {
+    echo "O animal andou<br>";
+  }
 }
 
 class Cavalo extends Animal
 {
-    // Polimorfismo é a reescrita de um método herdado
-    public function andar()
-    {
-        echo "O cavalo andou<br>";
-    }
+  // Polimorfismo é a reescrita de um método herdado
+  public function andar()
+  {
+    echo "O cavalo andou<br>";
+  }
 }
 
 $animal = new Cavalo();

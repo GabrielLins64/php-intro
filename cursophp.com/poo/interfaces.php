@@ -42,24 +42,24 @@ echo "<div style='color: green'>Resultado:<br>";
 
 interface Crud
 {
-    // As diferenças entre interface e classes abstratas, são:
-    // em interfaces não existe implementação. Já nas classes
-    // abstratas é possível fazer a implementação do corpo de
-    // membros e métodos. Bem como, caso um método/atributo
-    // seja declarado em uma interface, se torna obrigatória
-    // sua implementação na classe implementada.
-    public function create($data);
-    public function read();
-    public function update();
-    public function delete();
+  // As diferenças entre interface e classes abstratas, são:
+  // em interfaces não existe implementação. Já nas classes
+  // abstratas é possível fazer a implementação do corpo de
+  // membros e métodos. Bem como, caso um método/atributo
+  // seja declarado em uma interface, se torna obrigatória
+  // sua implementação na classe implementada.
+  public function create($data);
+  public function read();
+  public function update();
+  public function delete();
 }
 
 class Noticias implements Crud
 {
-    public function create($data) { echo "create $data<br>"; }
-    public function read() { echo "read<br>"; }
-    public function update() { echo "update<br>"; }
-    public function delete() { echo "delete<br>"; }
+  public function create($data) { echo "create $data<br>"; }
+  public function read() { echo "read<br>"; }
+  public function update() { echo "update<br>"; }
+  public function delete() { echo "delete<br>"; }
 }
 
 $not = new Noticias();
