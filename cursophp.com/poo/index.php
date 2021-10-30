@@ -25,6 +25,7 @@
   echo "<a href='/poo/polimorfismo.php'>Polimorfismo</a><br>";
   echo "<a href='/poo/interfaces.php'>Interfaces</a><br>";
   echo "<a href='/poo/namespaces'>Namespaces</a><br>";
+  echo "<a href='/poo/referencia-clonagem-obj.php'>Referência e Clonagem de Objetos</a><br>";
 ?>
 
 </body>
