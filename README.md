@@ -25,6 +25,8 @@ This repository will show how to configure and use an environment with Apache 2,
 - [PHP Interactive shell](#php-interactive-shell)
 - [Creating a database for login](#creating-a-database-for-login)
 - [Installing Materialize.css](#installing-materializecss)
+- [Composer](#composer)
+  - [Installation](#installation-1)
 - [References](#references)
 
 ---
@@ -299,6 +301,32 @@ $ psql -U <username> postgres -h localhost -W -f scripts/create_login_db.sql
 ## Installing Materialize.css
 
 Go to https://materializecss.com/getting-started.html and copy the CDN links. Then, add the *css* links to your project header, and the *js* links to your project footer.
+
+---
+
+## Composer
+
+### Installation
+
+<small>*From the Composer Docs:</small>
+
+Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
+
+Composer is not a package manager in the same sense as Yum or Apt are. Yes, it deals with "packages" or libraries, but it manages them on a per-project basis, installing them in a directory (e.g. vendor) inside your project. By default, it does not install anything globally. Thus, it is a dependency manager. It does however support a "global" project for convenience via the global command.
+
+To install globally, navigate into `scripts` directory, give execution permission to the composer installation scripts, then execute it.
+
+```shell
+$ cd scripts
+$ chmod +x composer_install.sh
+$ ./composer_install.sh
+```
+
+Finally, for enabling the call for `composer` command from anywhere, move the `composer.phar` to a system/user bin directory:
+
+```shell
+$ mv composer.phar ~/.local/bin/composer
+```
 
 ---
 
