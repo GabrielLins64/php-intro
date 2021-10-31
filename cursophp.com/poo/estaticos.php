@@ -2,7 +2,7 @@
 <button type="button" onclick="location.href='/poo';">Voltar</button>
 <?php
 // ---------- X ---------- X ---------- 
-echo "<h2>Constantes, Self e Parent</h2>";
+echo "<h2>Métodos e Atributos Estáticos</h2>";
 
 echo '
 
