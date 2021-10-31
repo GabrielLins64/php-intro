@@ -2,7 +2,7 @@
 <button type="button" onclick="location.href='/poo';">Voltar</button>
 <?php
 // ---------- X ---------- X ---------- 
-echo "<h2>Herança</h2>";
+echo "<h2>Modificadores de Acesso</h2>";
 
 echo '
 

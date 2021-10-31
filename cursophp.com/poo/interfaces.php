@@ -30,7 +30,7 @@ class Noticias implements Crud<br>
 }<br>
 <br>
 $not = new Noticias();<br>
-$not->create("data");<br>
+$not->create("dados");<br>
 $not->read();<br>
 $not->update();<br>
 $not->delete();<br>
