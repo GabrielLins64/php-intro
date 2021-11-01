@@ -28,6 +28,12 @@ This repository will show how to configure and use an environment with Apache 2,
 - [Installing Materialize.css](#installing-materializecss)
 - [Composer](#composer)
   - [Installation](#installation-1)
+  - [Composer init](#composer-init)
+  - [Composer require](#composer-require)
+  - [Composer update](#composer-update)
+  - [Removing a package](#removing-a-package)
+  - [Composer install](#composer-install)
+  - [Packagist](#packagist)
 - [References](#references)
 
 ---
@@ -358,6 +364,66 @@ Finally, for enabling the call for `composer` command from anywhere, move the `c
 ```shell
 $ mv composer.phar ~/.local/bin/composer
 ```
+
+### Composer init
+
+The `composer init` command creates the *composer.json*. This file describes the dependencies of your project and may contain other metadata as well. It typically should go in the top-most directory of your project/VCS repository. You can technically run Composer anywhere but if you want to publish a package to [Packagist](#packagist), it will have to be able to find the file at the top of your VCS repository. Usage:
+
+```shell
+$ composer init
+```
+
+### Composer require
+
+In order to install a package, *monolog* as an example, type:
+
+```shell
+$ composer require monolog/monolog
+```
+
+### Composer update
+
+To initially install the defined dependencies for your project, you should run the `update` command.
+
+This will make Composer do two things:
+
+- It resolves all dependencies listed in your `composer.json` file and writes all of the packages and their exact versions to the composer.lock file, locking the project to those specific versions. You should commit the `composer.lock` file to your project repo so that all people working on the project are locked to the same versions of dependencies (more below). This is the main role of the `update` command.
+
+- It then implicitly runs the `install` command. This will download the dependencies' files into the `vendor` directory in your project. (The `vendor` directory is the conventional location for all third-party code in a project). In our example from above, you would end up with the Monolog source files in `vendor/monolog/monolog/`. As Monolog has a dependency on `psr/log`, that package's files can also be found inside `vendor/`.
+
+If you only want to install, upgrade or remove one dependency, you can explicitly list it as an argument:
+
+```shell
+$ composer update monolog/monolog
+```
+
+### Removing a package
+
+Remove the line containing the `<vendor>/<package-name>` from the `composer.json`, then type:
+
+```shell
+$ composer update
+```
+
+### Composer install
+
+If there is already a composer.lock file in the project folder, it means either you ran the update command before, or someone else on the project ran the update command and committed the composer.lock file to the project (which is good).
+
+Either way, running install when a composer.lock file is present resolves and installs all dependencies that you listed in composer.json, but Composer uses the exact versions listed in composer.lock to ensure that the package versions are consistent for everyone working on your project. As a result you will have all dependencies requested by your composer.json file, but they may not all be at the very latest available versions (some of the dependencies listed in the composer.lock file may have released newer versions since the file was created). This is by design, it ensures that your project does not break because of unexpected changes in dependencies.
+
+So after fetching new changes from your VCS repository it is recommended to run a Composer install to make sure the vendor directory is up in sync with your composer.lock file.
+
+```shell
+$ composer install
+```
+
+### Packagist
+
+Packagist.org is the main Composer repository. A Composer repository is basically a package source: a place where you can get packages from. Packagist aims to be the central repository that everybody uses. This means that you can automatically require any package that is available there, without further specifying where Composer should look for the package.
+
+If you go to the Packagist.org website, you can browse and search for packages.
+
+Any open source project using Composer is recommended to publish their packages on Packagist. A library does not need to be on Packagist to be used by Composer, but it enables discovery and adoption by other developers more quickly.
 
 ---
 
