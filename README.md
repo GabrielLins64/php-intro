@@ -21,6 +21,7 @@ This repository will show how to configure and use an environment with Apache 2,
     - [Create the virtual host files](#create-the-virtual-host-files)
     - [Activate the new Virtual Host files](#activate-the-new-virtual-host-files)
     - [Configure the Host file from local server](#configure-the-host-file-from-local-server)
+- [PHP Project structure](#php-project-structure)
 - [Local serving with PHP](#local-serving-with-php)
 - [PHP Interactive shell](#php-interactive-shell)
 - [Creating a database for login](#creating-a-database-for-login)
@@ -129,7 +130,7 @@ CREATE DATABASE testdb;
 Logout from the psql shell and run the connection test script:
 
 ```shell
-$ php7.4 scripts/connection_test.php
+$ php7.4 bin/connection_test.php
 ```
 
 ---
@@ -262,6 +263,36 @@ And, finally, you should be able to navigate into www.cursophp.com in your brows
 
 ---
 
+## PHP Project structure
+
+```php
+project-root/
+  .git/            # Git configuration and source directory
+  assets/          # Uncompiled/raw CSS, LESS, Sass, JavaScript, images
+  bin/             # Command line scripts
+  config/          # Application configuration
+  node_modules/    # Node.js modules for managing front end
+  public/          # Publicly accessible files at http://example.com/
+      index.php    # Main entry point - front controller
+      ...
+  src/             # PHP source code files
+      Controller/  # Controllers
+      ...
+  templates/       # Template files
+  tests/           # Unit and functional tests
+  translations/    # Translation files
+      en_US.yaml
+  var/             # Temporary application files
+      cache/       # Cache files
+      log/         # Application specific log files
+  vendor/          # 3rd party packages and components with Composer
+  .gitignore       # Ignored files and dirs in Git (node_modules, var, vendor...)
+  composer.json    # Composer dependencies file
+  phpunit.xml.dist # PHPUnit configuration file
+```
+
+---
+
 ## Local serving with PHP
 
 If you would like to serve your project using only the [PHP built-in web server](https://www.php.net/manual/en/features.commandline.webserver.php), you can use the CLI command:
@@ -273,7 +304,7 @@ $ php7.4 -t <your-project-directory> -S <address>:<port>
 Example:
 
 ```shell
-$ php7.4 -t cursophp.com -S localhost:8080
+$ php7.4 -t public -S localhost:8080
 ```
 
 ---
@@ -293,7 +324,7 @@ $ php7.4 -a
 Use the sql script to create a login database, its table and its first user:
 
 ```shell
-$ psql -U <username> postgres -h localhost -W -f scripts/create_login_db.sql
+$ psql -U <username> postgres -h localhost -W -f bin/create_login_db.sql
 ```
 
 ---
@@ -314,10 +345,10 @@ Composer is a tool for dependency management in PHP. It allows you to declare th
 
 Composer is not a package manager in the same sense as Yum or Apt are. Yes, it deals with "packages" or libraries, but it manages them on a per-project basis, installing them in a directory (e.g. vendor) inside your project. By default, it does not install anything globally. Thus, it is a dependency manager. It does however support a "global" project for convenience via the global command.
 
-To install globally, navigate into `scripts` directory, give execution permission to the composer installation scripts, then execute it.
+To install globally, navigate into `bin` directory, give execution permission to the composer installation scripts, then execute it.
 
 ```shell
-$ cd scripts
+$ cd bin
 $ chmod +x composer_install.sh
 $ ./composer_install.sh
 ```
