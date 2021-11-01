@@ -1,0 +1,19 @@
+{
+    "name": "gabriellins/php-intro",
+    "description": "PHP Template with examples",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Gabriellins\\PhpIntro\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Lins",
+            "email": "gabrielinsmelo@gmail.com"
+        }
+    ],
+    "require": {
+        "cocur/slugify": "4.0"
+    }
+}
