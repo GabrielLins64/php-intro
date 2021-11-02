@@ -34,6 +34,7 @@ This repository will show how to configure and use an environment with Apache 2,
   - [Removing a package](#removing-a-package)
   - [Composer install](#composer-install)
   - [Packagist](#packagist)
+- [PHP Standards Recommendations (PSR)](#php-standards-recommendations-psr)
 - [References](#references)
 
 ---
@@ -424,6 +425,14 @@ Packagist.org is the main Composer repository. A Composer repository is basicall
 If you go to the Packagist.org website, you can browse and search for packages.
 
 Any open source project using Composer is recommended to publish their packages on Packagist. A library does not need to be on Packagist to be used by Composer, but it enables discovery and adoption by other developers more quickly.
+
+---
+
+## PHP Standards Recommendations (PSR)
+
+The PHP Standard Recommendation (PSR) is a PHP specification published by the [PHP Framework Interop Group](https://www.php-fig.org/). Similar to Python PIPs, it serves the standardization of programming concepts in PHP. The aim is to enable interoperability of components and to provide a common technical basis for implementation of proven concepts for optimal programming and testing practices. The PHP-FIG is formed by several PHP frameworks founders.
+
+You can find the PSRs in details on [PHP-FIG](https://www.php-fig.org/psr/).
 
 ---
 
