@@ -33,7 +33,9 @@ This repository will show how to configure and use an environment with Apache 2,
   - [Composer update](#composer-update)
   - [Removing a package](#removing-a-package)
   - [Composer install](#composer-install)
+  - [Composer dump-autoload](#composer-dump-autoload)
   - [Packagist](#packagist)
+- [PHP Standards Recommendations (PSR)](#php-standards-recommendations-psr)
 - [References](#references)
 
 ---
@@ -417,6 +419,51 @@ So after fetching new changes from your VCS repository it is recommended to run 
 $ composer install
 ```
 
+### Composer dump-autoload
+
+Autoloading is the process of automatically loading PHP classes without explicitly loading them with the `require()`, `require_once()`, `include()`, or `include_once()` functions.
+
+For libraries that specify autoload information, Composer generates a vendor/autoload.php file. You can include this file and start using the classes that those libraries provide without any extra work:
+
+```php
+require __DIR__ . '/vendor/autoload.php';
+
+// Use the libraries here without requiring'em.
+```
+
+Composer autoloads your project's classes the same way it autoloads external libraries. For that, there is a property called autoload that can be added in composer.json:
+
+```json
+{
+  "autoload": {
+    "psr-4": {
+      "MyNamespace\\": "src/"
+    }
+  }
+}
+```
+
+Composer will register a PSR-4 autoloader for the `MyNamespace` namespace.
+
+You define a mapping from namespaces to directories. The `src` directory would be in your project root, on the same level as `vendor` directory is. An example filename would be `src/Foo.php` containing a `MyNamespace\Foo` class.
+
+Composer maintains its own cache regarding the autoload files, so we need to use the following command every time we make a change to the autoload, as it will update the cache:
+
+```shell
+$ composer dump-autoload
+```
+
+This command will re-generate the `vendor/autoload.php` file. See the [dump-autoload](https://getcomposer.org/doc/03-cli.md#dump-autoload-dumpautoload-) docs for more information.
+
+Including that file will also return the autoloader instance, so you can store the return value of the include call in a variable and add more namespaces. This can be useful for autoloading classes in a test suite, for example:
+
+```php
+$loader = require __DIR__ . '/vendor/autoload.php';
+$loader->addPsr4('Acme\\Test\\', __DIR__);
+```
+
+In addition to PSR-4 autoloading, Composer also supports PSR-0, classmap and files autoloading. See the [autoload docs](https://getcomposer.org/doc/04-schema.md#autoload) for more information.
+
 ### Packagist
 
 Packagist.org is the main Composer repository. A Composer repository is basically a package source: a place where you can get packages from. Packagist aims to be the central repository that everybody uses. This means that you can automatically require any package that is available there, without further specifying where Composer should look for the package.
@@ -424,6 +471,14 @@ Packagist.org is the main Composer repository. A Composer repository is basicall
 If you go to the Packagist.org website, you can browse and search for packages.
 
 Any open source project using Composer is recommended to publish their packages on Packagist. A library does not need to be on Packagist to be used by Composer, but it enables discovery and adoption by other developers more quickly.
+
+---
+
+## PHP Standards Recommendations (PSR)
+
+The PHP Standard Recommendation (PSR) is a PHP specification published by the [PHP Framework Interop Group](https://www.php-fig.org/). Similar to Python PIPs, it serves the standardization of programming concepts in PHP. The aim is to enable interoperability of components and to provide a common technical basis for implementation of proven concepts for optimal programming and testing practices. The PHP-FIG is formed by several PHP frameworks founders.
+
+You can find the PSRs in details on [PHP-FIG](https://www.php-fig.org/psr/).
 
 ---
 

@@ -30,6 +30,7 @@
   echo "<a href='/poo/relacao-objetos'>Relações entre objetos</a><br>";
   echo "<a href='/poo/metodos-magicos.php'>Métodos Mágicos</a><br>";
   echo "<a href='/poo/composer.php'>Composer</a><br>";
+  echo "<a href='/poo/crud'>CRUD com PDO, Singleton e Autoload</a><br>";
 ?>
 
 </body>
